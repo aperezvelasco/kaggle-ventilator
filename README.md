@@ -36,11 +36,12 @@ First clone the repository:
 git clone https://github.com/aperezvelasco/kaggle-ventilator.git
 ```
 
-Create the directory where the data will be stored:
+Create the directory where the data and submissions will be stored:
 
 ```
 cd kaggle-ventilator
 mkdir data
+mkdir submission
 ```
 
 Download the zip file with the data to be stored. For doing so, you need to have a .json
@@ -48,9 +49,12 @@ file with the credentials defined in it (/home/username/.kaggle/kaggle.json):
 
 ```
 pip install kaggle
+cd data
 kaggle competitions download -c ventilator-pressure-prediction
 unzip ventilator-pressure-prediction.zip 
 rm ventilator-pressure-prediction.zip 
+cd ..
+mv data/sample_submission.csv submission/sample_submission.csv
 ```
 
 There will be 3 different files. One for train, one for test, and one example of how a 

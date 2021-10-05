@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from src.utils import open_train_data, open_test_data
-from src.featurescreation import FeaturesCreation
+from src.features import FeaturesCreation
 
 
 class MainWorkflow:
